@@ -15,7 +15,7 @@ const PetCard = ({ result }) => {
      * output desired attributes: 
      * Image - Name - Age - Breed- Id */
     <>
-     {result != null ?  result.map((e) =>{
+     {result != null || "" ?  result.map((e) =>{
        
        let petImageLarge = e.photos &&  e.photos[0] && e.photos[0].large;
 
