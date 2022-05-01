@@ -22,7 +22,7 @@ function App() {
      
 
 
-     axios.get("http://localhost:5000/data").then((response) => {
+     axios.get("/data").then((response) => {
           //setToken(response.data.access_token)  
           setResult(response.data);
     })
