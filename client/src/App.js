@@ -24,6 +24,7 @@ function App() {
 
      axios.get("/data").then((response) => {
           //setToken(response.data.access_token)  
+          console.log(response);
           setResult(response.data);
     })
     .catch(error => 
