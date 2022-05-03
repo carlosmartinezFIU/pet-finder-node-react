@@ -26,6 +26,9 @@ Node js was used to fetch the token given the APi key and Secret
 ## Full Display
 ![full-website-display](full-website-display.png)
 
+## Mobile Display
+![mobileOne.png](mobileOne.png)
+![mobileTwo.png](mobileTwo.png)
 
 
 # Getting Started with Create React App
