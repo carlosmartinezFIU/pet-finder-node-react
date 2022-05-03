@@ -85,8 +85,11 @@
   
 }
 
-.form-zipcode input:focus{
-    outline: none
+.cat-input:focus{
+    outline: none;
+}
+.zipcode-input:focus{
+    outline: none;
 }
 
 

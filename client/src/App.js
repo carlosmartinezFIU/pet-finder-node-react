@@ -41,7 +41,7 @@ const update = (data) =>{
 
   const options = {
     method: "POST",
-    url: "http://localhost:5000/update",
+    url: "/update",
     params: {
       zipcode: one,
       animal: two
