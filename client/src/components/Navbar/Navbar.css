@@ -27,3 +27,15 @@
 .paw:hover{
     filter: invert(68%) sepia(36%) saturate(3345%) hue-rotate(169deg) brightness(85%) contrast(87%);
 }
+
+@media screen and (max-width: 550px) {
+    .paw-container{
+        left: unset;
+    }
+
+    .title-container{
+        font-size: 46px;
+        margin: 0px 0px 0px 108px;
+    }
+
+}

@@ -35,3 +35,32 @@
 .pet-age{
     margin-left: 42px;
 }
+
+@media screen and (max-width: 550px) {
+    .pet-card-wrapper{
+        width: 193px;
+        height: 287px;
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .pet-image-container{
+        width: auto;
+        height: 158px;
+    }
+
+    .pet-image-container img{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 23px;
+        object-fit: cover;
+    }
+
+    .pet-info-container{
+        text-align: center;
+    }
+    .pet-name, .pet-breed, .pet-age{
+        margin-left: 0px;
+    }
+
+    
+}

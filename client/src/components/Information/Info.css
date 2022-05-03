@@ -14,11 +14,11 @@
     display: flex;
 }
 
-.pug-image-container img{
+.pup-image-container img{
     width: 100%;
 }
 
-.pug-image-container{
+.pup-image-container{
     width: 300px;
     position: relative;
     top: -206px;
@@ -148,4 +148,43 @@
 .cat-input{
     height: 22px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 550px){
+    .description-container{
+        margin-left: unset;
+        margin: auto;
+        width: 365px;
+    }
+
+    .pup-image-container{
+        display: none;
+    }
+
+    .form-zipcode{
+        height: auto;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .form-zipcode input{
+        width: 279px;
+        margin: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
+
+    }
+
+    .form-zipcode .zipcode-input{
+        position: unset;
+        width: 200px;
+    }
+
+    .search-logo{
+        position: unset;
+    }
+
+    .zipcode-search-container{
+        width: 326px;
+    }
 }

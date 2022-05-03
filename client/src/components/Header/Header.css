@@ -27,3 +27,10 @@
     font-family: 'Abril Fatface', cursive;
     color: #fff;
 }
+
+@media screen and (max-width: 550px) {
+    .header-description{
+        width: 383px;
+        font-size: 29px;
+    }
+}

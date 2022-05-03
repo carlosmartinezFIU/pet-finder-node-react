@@ -52,6 +52,25 @@ const getAnimals = async () =>{
 
 
 
+app.post("/update", async (req, res) => {
+   let zipcode = req.query.zipcode;
+   let animal = req.query.animal;
+
+    const updateInfo = await fetchData();
+
+    const petResultUpdate = await fetch(`https://api.petfinder.com/v2/animals?location=${zipcode}&type=${animal}`, {
+      headers: {
+        Authorization: `Bearer ${updateInfo.access_token}`,
+        },
+      
+      })
+      const jsonUpdate = await petResultUpdate.json();
+      console.log(jsonUpdate)
+      res.json(jsonUpdate.animals); 
+})
+
+
+
 app.get("/data", async (req, res) =>{
     const info = await getAnimals();
     //console.log(info);

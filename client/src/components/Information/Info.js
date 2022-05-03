@@ -24,7 +24,7 @@ const Info = ({ update }) => {
 /** Function called to pass input form value
  * Checks if there is an incorrect Zipcode
  * Checks if there is an incorrect pet 
- * Validate Zipcode 
+ * Validates Zipcode 
 */
   const handleSubmit = e =>{
     e.preventDefault();
@@ -104,7 +104,7 @@ const petVali = () =>{
   return (
     <div className='info-wrapper'>
 
-        <div className='pug-image-container'>
+        <div className='pup-image-container'>
             <img alt="pug puppy" src={pugImage}/>
         </div>
 
