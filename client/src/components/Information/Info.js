@@ -16,9 +16,8 @@ const Info = ({ update }) => {
    *  
    * Info  changes the placeholder in input w/ given above choices
    */
-  const [pet, setPet] = useState('');
+  const [pet, setPet] = useState("");
   const [zipcode, setZipcode] = useState("");
-  const [info, setInfo] = useState("'Cat'");
 
 
 /** Function called to pass input form value
@@ -30,21 +29,20 @@ const Info = ({ update }) => {
     e.preventDefault();
     if(!zipcode){
       emptyZip();
+      return;
     }
     else if(!zipValidation(zipcode)){
       wrongZip()
+      return;
     }
 
     if(!pet){
       emptyPet();
+      return;
     }
-    if(pet !== 'Cat' || 
-            pet !== 'Dog' ||
-            pet !== 'Bird' ||
-            pet !== 'Rabbit')
-    {
-        petVali();
-    }
+
+
+    console.log("Outside the if " + pet)
 
     update({zipcode, pet})
     setZipcode('');
@@ -81,24 +79,7 @@ const petVali = () =>{
      return /^\d{5}(-\d{4})?$/.test(element)
   }
 
-  /**Updates the placeholder with given array */
-  const updatePlaceholder = () =>{
-      let delay = 5500;
-      let inputArray = ["'Cat'", "'Dog'", "'Bird'", "'Rabbit'"]
-
-      for(let x = 0; x < inputArray.length; x++){
-          set(inputArray[x], x * delay);
-      }
-
-      function set(a, b){
-        setTimeout(() =>{
-          setInterval(() => {
-            setInfo(a);
-          }, delay * inputArray.length);
-        }, b);
-      }
-  }
-  updatePlaceholder();
+  
 
 
   return (
@@ -112,7 +93,7 @@ const petVali = () =>{
 
         <div className='description-container'>
               <form className='form-zipcode'>
-                <input className='cat-input' value={pet} onChange={(e) => setPet(e.target.value)} placeholder={info}/>
+                <input className='cat-input' value={pet} onChange={(e) => setPet(e.target.value)} placeholder="Cat - Dog - Bird - Rabbit"/>
 
                 <div className='zipcode-search-container'>
                     <input className='zipcode-input' value={zipcode} onChange={(e) => setZipcode(e.target.value)} placeholder='Enter ZIP code'/>

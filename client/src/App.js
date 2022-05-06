@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './App.css';
 import axios from "axios";
 import Header from "./components/Header/Header";
 import Info from "./components/Information/Info";
@@ -21,7 +22,7 @@ function App() {
   useEffect(() =>{
      axios.get("/data").then((response) => {
           //setToken(response.data.access_token)  
-          console.log(response);
+          console.log(response.data);
           setResult(response.data);
     }).catch(error => 
       console.log("ERR::   " + error)
@@ -49,6 +50,8 @@ const update = (data) =>{
   }
 
   axios.request(options).then((response) =>{
+    let str = JSON.stringify(response);
+    console.log("In update " + str);
       setResult(response.data);
   }).catch((error) => {
      console.log(error);
@@ -62,7 +65,8 @@ const update = (data) =>{
       <Navbar />
       <Header />
       <Info update={update}  />
-      <PetContainer  result={result}  />
+      {result && <PetContainer  result={result}  />  }
+      {result === "" ? <div>jygg</div> : <div className="no-data">Error: Seems like there were no pets available</div> }
       <Footer />
      
 
