@@ -65,9 +65,8 @@ const update = (data) =>{
       <Navbar />
       <Header />
       <Info update={update}  />
-      {result !== null || "" ? <PetContainer  result={result}  /> 
-       : <div className="no-data">Error: Seems like there were no pets available</div>
-       }
+      {result && <PetContainer  result={result} />}
+      {!result && <div className="no-data">Error: No results</div>}
       <Footer />
      
 
