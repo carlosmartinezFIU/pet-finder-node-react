@@ -66,7 +66,8 @@ const update = (data) =>{
       <Header />
       <Info update={update}  />
       {result && <PetContainer  result={result}  />  }
-      {result === "" ? <div>jygg</div> : <div className="no-data">Error: Seems like there were no pets available</div> }
+      {result === "" ? <div className="no-data">Error: Seems like there were no pets available</div> : 
+      <div className="no-data">Error: Seems like there were no pets available</div> }
       <Footer />
      
 
